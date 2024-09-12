@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "NanumSquare";
+  src: url("../../public/fonts/NanumSquare_acL.ttf") format("truetype");
+  font-weight: 300;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  src: url("../../public/fonts/NanumSquare_acR.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  src: url("../../public/fonts/NanumSquare_acB.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  src: url("../../public/fonts/NanumSquare_acEB.ttf") format("truetype");
+  font-weight: 900;
+  font-style: extrabold;
+}
+
+@layer components {
+  .bottom-nav {
+    @apply flex border-t border-slate-200 bg-white pt-1 px-2 fixed -bottom-0.5 left-0 w-full;
+  }
+
+  .bottom-nav-list {
+    @apply flex w-full;
+  }
+
+  .bottom-nav-item {
+    @apply flex-1 justify-around;
+  }
+
+  .bottom-nav-button {
+    @apply flex flex-col items-center justify-center w-full;
+  }
+
+  .bottom-nav-span {
+    @apply text-[0.6rem] text-[#777777] text-center;
+  }
+  .mypage-article {
+    @apply w-[30%] items-center mx-2 flex-col flex text-center border-2 border-slate-200 rounded-xl p-2   mb-2;
+  }
+
+  .nav-link {
+    @apply text-white whitespace-nowrap px-3;
+  }
+}
+
+.embla {
+  max-width: 80%;
+  margin: auto;
+  --slide-height: 14rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+
+  /* 영역 표시 용도 */
+  margin-bottom: 2rem;
+  border: solid 1px black;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+.embla__slide__number {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  border-radius: 1.8rem;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  user-select: none;
+}
+.title {
+  @apply text-xl text-[#222222] font-extrabold mt-10;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.gradient-background {
+  @apply bg-white;
+  background: linear-gradient(
+    270deg,
+    white 28.09%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.scroll-item::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE와 Edge에서 스크롤바 숨김 */
+  scrollbar-width: none;
+  display: none; /* Chrome, Safari, Edge, Opera에서 스크롤바 숨김 */
+}
+
+.description {
+  @apply text-xs text-[#666666] pb-1;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.gradient-background {
+  @apply bg-white;
+  background: linear-gradient(
+    270deg,
+    white 28.09%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.scroll-item::-webkit-scrollbar {
+  -ms-overflow-style: none; /* IE와 Edge에서 스크롤바 숨김 */
+  scrollbar-width: none;
+  display: none; /* Chrome, Safari, Edge, Opera에서 스크롤바 숨김 */
+}
+
+.nav-link {
+  @apply text-white whitespace-nowrap px-3;
+}
+
+html,
+body {
+  font-family: "NanumSquare", sans-serif;
+}
+.scroll-item::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge, Opera에서 스크롤바 숨김 */
+}
+
+.scroll-item {
+  -ms-overflow-style: none; /* IE와 Edge에서 스크롤바 숨김 */
+  scrollbar-width: none; /* Firefox에서 스크롤바 숨김 */
+}
+
+.delivery-state {
+  @apply flex-col;
+}
+.delivery-state > p {
+  @apply text-center;
+}
